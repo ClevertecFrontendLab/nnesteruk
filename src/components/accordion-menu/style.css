@@ -1,0 +1,29 @@
+.accordion-menu-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 24px 20px;
+    font-size: 12px;
+}
+
+.list-item {
+    position: relative;
+}
+.list-item:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #c4ff61;
+    transition: width 0.3s ease;
+}
+.list-item button:hover {
+    background-color: transparent;
+    font-weight: 700;
+}
+.list-item:hover:before {
+    width: 10px;
+}

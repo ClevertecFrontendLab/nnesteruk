@@ -7,6 +7,7 @@ const initialState = {
     isLoading: false,
     error: '' as string | null,
 };
+
 export const appSlice = createSlice({
     name: 'app',
     initialState,
@@ -19,6 +20,7 @@ export const appSlice = createSlice({
         },
     },
 });
+
 export const userLoadingSelector = (state: ApplicationState) => state.app.isLoading;
 export const userErrorSelector = (state: ApplicationState) => state.app.error;
 
