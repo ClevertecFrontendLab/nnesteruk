@@ -31,10 +31,10 @@ export const Home = () => (
             </Center>
             <Flex direction='column' gap={4} marginTop={8}>
                 <Flex gap={3}>
-                    <Button bgColor='transparent' border='1px solid' paddingX={3}>
+                    <Button bgColor='transparent' border='1px solid lightGray' paddingX={3}>
                         <img src={FilterIcon} alt='filter' />
                     </Button>
-                    <InputGroup borderColor='totalBlack'>
+                    <InputGroup borderColor='lightGray'>
                         <Input placeholder='Название или ингредиент...' width='100%' />
                         <InputRightElement>
                             <IconButton
@@ -62,7 +62,7 @@ export const Home = () => (
             </Flex>
         </Box>
 
-        <Container maxW='1456px' width='100%' padding='24px 72px 30px 24px'>
+        <Container maxW='1456px' width='100%' padding='24px 72px 30px 24px' overflowX='hidden'>
             <Box>
                 <Heading fontWeight={500}>Новые рецепты</Heading>
                 <RecipeList />
@@ -74,7 +74,6 @@ export const Home = () => (
                         Вся подборка
                     </Button>
                 </Flex>
-
                 <RecipeListWithButtons bgColorSectionCategory='lightYellow' />
             </Box>
             <Box mt={10} bgColor='lime.300' px={6} py={6} borderRadius='16px'>

@@ -46,6 +46,13 @@ const recipes: Recipes[] = [
         likes: [],
         category: { icon: SaladIcon, text: 'Салаты' },
     },
+    {
+        img: Salad,
+        title: 'Салат "Здоровье"',
+        text: 'Сельдерей очень полезен для здоровья, пора набираться витаминов. Не  салат, а сплошное удовольствие:) Вкусный, необычный, а главное быстрый.',
+        likes: [],
+        category: { icon: SaladIcon, text: 'Салаты' },
+    },
 ];
 
 export const RecipeList = ({
@@ -57,7 +64,13 @@ export const RecipeList = ({
     const allRecipes = showAll ? recipes : recipes.slice(0, limit);
 
     return (
-        <Flex marginTop={8} overflow='hidden' gap={{ base: '12px', xl: '24px' }}>
+        <Flex
+            position='relative'
+            marginTop={8}
+            gap={{ base: '12px', xl: '24px' }}
+            width='100%'
+            overflowX='hidden'
+        >
             {allRecipes?.map((recipe) => (
                 <RecipeItem
                     recipe={recipe}

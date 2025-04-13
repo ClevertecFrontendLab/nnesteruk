@@ -1,4 +1,4 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, useBreakpointValue } from '@chakra-ui/react';
 import { Outlet } from 'react-router';
 
 import { AccordionMenu } from '~/components/accordion-menu';
@@ -16,18 +16,22 @@ export const Layout = () => {
         { icon: <Emoji />, count: 375 },
     ];
 
+    const isMobile = useBreakpointValue({ base: true, lg: false });
+
     return (
         <Box>
             <Flex direction='column' minHeight='100vh'>
-                <Header />
+                <Header iconList={isMobile ? listIcon : undefined} />
                 <Flex flex={1}>
                     <AccordionMenu />
                     <Box flex={1} overflowY='auto' marginLeft='255px' marginRight='200px'>
                         <Outlet />
                     </Box>
-                    <Box paddingY={4} paddingX={14} position='fixed' right={0}>
-                        <IconList items={listIcon} />
-                    </Box>
+                    {!isMobile && (
+                        <Box paddingY={4} paddingX={14} position='fixed' right={0}>
+                            <IconList items={listIcon} />
+                        </Box>
+                    )}
                 </Flex>
             </Flex>
         </Box>
