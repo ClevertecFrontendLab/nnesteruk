@@ -9,7 +9,7 @@ import { RecipeItemProps } from './recipe-list.types';
 export const RecipeItem = ({ recipe, showImg, bgColorSectionCategory }: RecipeItemProps) => (
     <Card
         borderRadius='lg'
-        width={{ sm: '158px', lg: '277px', xl: '322px' }}
+        width={{ sm: '158px', lg: '279px', xl: '322px' }}
         flexShrink={0}
         flexGrow={1}
         borderBottom='0.5px solid lightGray'
@@ -28,8 +28,8 @@ export const RecipeItem = ({ recipe, showImg, bgColorSectionCategory }: RecipeIt
         <CardBody
             display='flex'
             flexDirection='column'
-            px={{ base: 2, lg: 3, xl: 6 }}
-            py={{ base: 2, lg: 2, xl: 6 }}
+            px={{ sm: 2, lg: 3, xl: 5 }}
+            py={{ sm: 2, lg: 3, xl: 5 }}
             gap={showImg ? { base: 2, lg: 6 } : 6}
         >
             <Flex direction='column' gap={2}>

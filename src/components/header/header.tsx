@@ -12,7 +12,7 @@ export const Header = ({ iconList }: { iconList?: Likes[] }) => (
     <Box
         as='header'
         bgColor='#ffffd3'
-        paddingRight='56px'
+        paddingRight={{ sm: 8, lg: 16 }}
         position='sticky'
         top={0}
         zIndex={100}
@@ -21,7 +21,7 @@ export const Header = ({ iconList }: { iconList?: Likes[] }) => (
         <Flex alignItems='center' justifyContent='space-between'>
             <Flex maxW='255px' width='100%' paddingLeft={4} gap={1.5}>
                 <Logo />
-                <Box paddingTop={1}>
+                <Box paddingTop={1} display={{ sm: 'none', md: 'block' }}>
                     <LogoName />
                 </Box>
             </Flex>
